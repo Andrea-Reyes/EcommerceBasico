@@ -28,7 +28,7 @@ def formulario_view(request):
             data = {
                 'nombre': form.cleaned_data['nombre'],
                 'descripcion': form.cleaned_data['descripcion'],
-                'precio': form.cleaned_data['precio'],
+                'precio': float(form.cleaned_data['precio']),
             }
             requests.post(f'{FIREBASE_BASE_URL}.json', json=data)
             return redirect('index')

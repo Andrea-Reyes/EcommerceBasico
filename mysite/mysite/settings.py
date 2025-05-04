@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-idx-ecommercebasico-1746388496403.cluster-f4iwdviaqvc2ct6pgytzw4xqy4.cloudworkstations.dev"
+]
 
 # Application definition
 

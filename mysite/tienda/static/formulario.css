@@ -63,7 +63,7 @@ input[type="text"], input[type="number"], textarea {
     border: 1px solid rgb(228, 228, 228);
 }
 
-button {
+button, .btn {
     background: #000000;
     color: white;
     padding: 10px 20px;
@@ -73,8 +73,11 @@ button {
     font-size: 12px;
     cursor: pointer;
     transition: 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.2;
 }
 
-button:hover {
-    background-color: #000000;
+button:hover, .btn:hover {
+    background-color: #9b9b9b;
 }
