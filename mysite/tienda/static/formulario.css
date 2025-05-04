@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: Poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    background: #f4f4f4;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    height: 80%;
+    text-align: center;
+    color: #fff;
+}
+
+form p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+form p label {
+    margin: 0;
+    white-space: nowrap;
+    font-weight: 400;
+    width: 100px;
+}
+
+form p input,
+form p textarea,
+form p select {
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 300;
+    text-align: left;
+    color: #000000;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    border: 1px solid rgb(228, 228, 228);
+}
+
+button {
+    background: #000000;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #000000;
+}
