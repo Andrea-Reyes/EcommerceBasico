@@ -80,4 +80,5 @@ button, .btn {
 
 button:hover, .btn:hover {
     background-color: #9b9b9b;
+    color: #000000;
 }
