@@ -4,9 +4,7 @@ body {
     margin: 0;
     background-color: #ffffff;
     font-family: Poppins;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     min-height: 100vh;
 }
 
@@ -14,10 +12,9 @@ button, .btn {
     background: #000000;
     color: white;
     padding: 10px 20px;
-    margin-top: 20px;
     border: none;
     border-radius: 10px;
-    font-size: 12px;
+    font-size: 10px;
     cursor: pointer;
     transition: 0.3s ease;
     display: inline-block;
@@ -28,4 +25,46 @@ button, .btn {
 button:hover, .btn:hover {
     background-color: #9b9b9b;
     color: #000000;
+}
+
+.encabezado {
+    padding: 10px 50px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid black;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+
+.contenedor {
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #f4f4f4;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.contenido {
+    width: 70%;
+    padding: 10px;
+}
+
+.botones {
+    width: 30%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
 }

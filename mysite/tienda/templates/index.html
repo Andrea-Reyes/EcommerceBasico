@@ -7,8 +7,25 @@
     <title>Productos</title>
 </head>
 <body>
-    <p></p>
-    <a href="{% url 'formulario' %}" class="btn">Agregar un producto</a>
-    <a href="https://api.whatsapp.com/send?phone=+50236994033&text=%C2%A1Hola!" target="_blank" class="btn">WhatsApp</a>
+    <div class="encabezado">
+        <h1>Ponerle un nombre a la tienda</h1>
+        <a href="{% url 'formulario' %}" class="btn">Agregar un producto</a>
+    </div>
+
+    <div class="productos">
+        {% for producto in productos %}
+            <div class="contenedor">
+                <div class="contenido">
+                    <p>{{ producto.nombre }}</p>
+                    <p>{{ producto.descripcion }}</p>
+                    
+                </div>
+                <div class="botones">
+                    <a href="https://api.whatsapp.com/send?phone=+50236994033&text=%C2%A1Buen día! Quisiera solicitar información sobre el producto '{{ producto.nombre }}'. Gracias." target="_blank" class="btn">WhatsApp</a>
+                    <p>Precio: Q{{ producto.precio }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
