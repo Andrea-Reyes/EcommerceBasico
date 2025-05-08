@@ -25,10 +25,16 @@ SECRET_KEY = 'django-insecure-^=6-_k)oh!n9-fpcd1qd0rf(!8y2!!8cc*so1if(!*ydv@*_dc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "8000-idx-ecommercebasico-1746388496403.cluster-f4iwdviaqvc2ct6pgytzw4xqy4.cloudworkstations.dev",
+    "8080-idx-ecommercebasico-1746388496403.cluster-f4iwdviaqvc2ct6pgytzw4xqy4.cloudworkstations.dev",
+    "localhost",
+    "127.0.0.1",
+]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-idx-ecommercebasico-1746388496403.cluster-f4iwdviaqvc2ct6pgytzw4xqy4.cloudworkstations.dev"
+    "https://8000-idx-ecommercebasico-1746388496403.cluster-f4iwdviaqvc2ct6pgytzw4xqy4.cloudworkstations.dev",
+    "https://8080-idx-ecommercebasico-1746388496403.cluster-f4iwdviaqvc2ct6pgytzw4xqy4.cloudworkstations.dev",
 ]
 
 # Application definition

@@ -2,30 +2,34 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'index.css' %}">
-    <title>Productos</title>
+    <title>Ecommerce</title>
 </head>
 <body>
     <div class="encabezado">
-        <h1>Ponerle un nombre a la tienda</h1>
+        <h1>Tienda El Chino</h1>
         <a href="{% url 'formulario' %}" class="btn">Agregar un producto</a>
     </div>
-
+    {% if productos %}
     <div class="productos">
         {% for producto in productos %}
             <div class="contenedor">
                 <div class="contenido">
                     <p>{{ producto.nombre }}</p>
                     <p>{{ producto.descripcion }}</p>
-                    
-                </div>
-                <div class="botones">
-                    <a href="https://api.whatsapp.com/send?phone=+50236994033&text=%C2%A1Buen día! Quisiera solicitar información sobre el producto '{{ producto.nombre }}'. Gracias." target="_blank" class="btn">WhatsApp</a>
                     <p>Precio: Q{{ producto.precio }}</p>
                 </div>
+                <section class="lateral">
+                    <img src="{{ producto.imagenURL }}" alt="{{ producto.nombre }}.img">
+                    <a href="{{producto.whatsappURL}}" target="_blank" class="btn">WhatsApp</a>
+                </section>
             </div>
         {% endfor %}
     </div>
+    {% else %}
+    <p>No hay productos disponibles en este momento.</p>
+    {% endif %}
 </body>
 </html>

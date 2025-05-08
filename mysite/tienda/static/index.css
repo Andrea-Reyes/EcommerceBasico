@@ -9,17 +9,18 @@ body {
 }
 
 button, .btn {
-    background: #000000;
+    background: black;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 12px;
     cursor: pointer;
     transition: 0.3s ease;
     display: inline-block;
     text-decoration: none;
     line-height: 1.2;
+    margin: 20px;
 }
 
 button:hover, .btn:hover {
@@ -41,6 +42,13 @@ button:hover, .btn:hover {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
     padding: 50px;
+    & button, .btn {
+        background: #25d366;
+    }
+    & button:hover, .btn:hover {
+        background-color: #075e54;
+        color: white;
+    }
 }
 
 .contenedor {
@@ -62,9 +70,58 @@ button:hover, .btn:hover {
     padding: 10px;
 }
 
-.botones {
+.lateral {
     width: 30%;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+}
+
+/* imagenes*/
+
+.lateral img {
+    width: 120px; 
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/*responsive*/
+@media (max-width: 600px) {
+    .productos {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contenido {
+        width: 100%;
+        order: 1;
+    }
+
+    .lateral {
+        width: 100%;
+        order: 2;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imagen {
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn {
+        font-size: 14px;
+        width: auto;
+    }
 }
